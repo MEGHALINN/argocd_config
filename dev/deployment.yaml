@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapp-deploy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: myapp
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nanajanashia/argocd-app:1.2
+        image: meghabmb/python-k8s-app:v1
         ports:
         - containerPort: 8080
